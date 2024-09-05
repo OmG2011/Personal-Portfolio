@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 function Falling_Boxes(props) {
+  const posRef = useRef(null)
+
   return (
-    <div>
+    <div className='parent'>
       <h1>Whack a Mole!</h1>
+      <div>
+      </div>
     </div>
   );
 }
