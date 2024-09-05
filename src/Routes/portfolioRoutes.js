@@ -10,7 +10,7 @@ function portfolioRoutes() {
       <Routes>
         {/* <Route path='/' element={<HomePage />} /> */}
         <Route path='/Personal-Portfolio/' element={<GPTHomepage />} />
-        <Route path='/Personal-Portfolio/CV' element={<Skillsets />} />
+        <Route path='/Personal-Portfolio/cv' element={<Skillsets />} />
       </Routes>
     </div>
   );
