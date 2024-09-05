@@ -1,0 +1,111 @@
+/* Basic layout styles */
+.bg-visible {
+  background: url('../assets/card-bg.gif') no-repeat center center;
+  background-size: cover;
+}
+
+.bg-hidden {
+  background: none;
+}
+
+.animation {
+  height: 50px;
+  overflow: hidden;
+  margin-left: 1rem;
+}
+
+.animation>div>div {
+  padding: 0.25rem 0.75rem;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+
+@keyframes text-animation {
+
+  0%,
+  10% {
+    margin-top: 3px;
+  }
+
+  20%,
+  30% {
+    margin-top: -56px;
+    /* Move up by one item height */
+  }
+
+  40%,
+  50% {
+    margin-top: -111px;
+    /* Move up by two item heights */
+  }
+
+  60%,
+  70%,
+  80% {
+    margin-top: -111px;
+    /* Move up by three item heights */
+  }
+
+  90%,
+  100% {
+    margin-top: 3px;
+  }
+}
+
+/* Button styling */
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .animation h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .bg-visible {
+    height: 100vh;
+  }
+
+  .bg-hidden {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 576px) {
+  .animation h1 {
+    font-size: 1.75rem;
+  }
+
+  button {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+  }
+
+  .bg-visible {
+    height: 100vh;
+  }
+
+  .bg-hidden {
+    height: 100vh;
+  }
+}

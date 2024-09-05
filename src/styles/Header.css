@@ -1,0 +1,12 @@
+.top {
+  background-color: black;
+  font-family: DPComic;
+  box-sizing: border-box;
+  margin: 0;
+  cursor: url('../assets/cursor.png'), auto;  
+  z-index: 1000;
+}
+
+.main_div{
+  z-index: 1000;
+}
