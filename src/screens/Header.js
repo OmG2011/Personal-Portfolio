@@ -19,15 +19,15 @@ function Header() {
   return (
     <Navbar expand="lg" className="main_div bg-dark">
       <Container>
-        <Navbar.Brand href="/" className='d-flex align-items-center'>
+        <Navbar.Brand href="/Personal-Portfolio" className='d-flex align-items-center'>
           <img src={Logo} alt="Logo" className='logo me-3' style={{ width: '50px' }} />
           <span className='text-white' style={{ fontSize: '24px' }}>Personal Website</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-light' />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/" className='text-white'>Home</Nav.Link>
-            <Nav.Link href="/cv" className='text-white'>Portfolio / Projects</Nav.Link>
+            <Nav.Link href="/Personal-Portfolio" className='text-white'>Home</Nav.Link>
+            <Nav.Link href="/Personal-Portfolio/cv" className='text-white'>Portfolio / Projects</Nav.Link>
             <Nav.Link className='text-white'>{currentTime.toLocaleTimeString()}</Nav.Link>
           </Nav>
         </Navbar.Collapse>
