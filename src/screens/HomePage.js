@@ -6,9 +6,9 @@ import axios from 'axios';
 import ReactCardFlip from 'react-card-flip';
 import object from '../assets/Web_Dev.png'
 // import bg from '../assets/Abstract_Background.jpeg'
-import backgroundVideo from '../assets/Home_Background.mp4'
+// import backgroundVideo from '../assets/Home_Background.mp4'
 import backgroundVid from '../assets/Home_Video.mp4'
-import object_2 from '../assets/Web_dev.gif'
+// import object_2 from '../assets/Web_dev.gif'
 import TicTacToe from './TicTacToe';
 import Skillsets from './Skillsets';
 
@@ -67,7 +67,7 @@ function HomePage() {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  });
 
   // API Key for News Articles. f31c5d2236724f26b0da498dbdb8d25d
 
@@ -84,10 +84,10 @@ function HomePage() {
       setLoading(false);
     }
 
-    if (date.getMinutes() === 30 && date.getSeconds() === 0 && date.getMilliseconds() == 0) {
+    if (date.getMinutes() === 30 && date.getSeconds() === 0 && date.getMilliseconds() === 0) {
       fetchNews();
     }
-  }, []);
+  });
 
   useEffect(() => {
     let i = 0;
@@ -140,7 +140,7 @@ function HomePage() {
           />
         )}
         <div className='inner-div h-100' style={{ position: 'relative', zIndex: 1 }}>
-          <img className='abstract' src={object} alt='Abstract Image' />
+          <img className='abstract' src={object} />
           <h1 style={{ fontSize: '100px', zIndex: 2, color: 'white', marginLeft: '50px' }}>Om Goyal</h1>
         </div>
         <h1 style={{ zIndex: '2', color: 'white' }}>Something</h1>

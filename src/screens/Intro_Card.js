@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Intro_Card.css'; // Make sure this file contains the styles below
-import gifBg from '../assets/card-bg.gif'
+// import gifBg from '../assets/card-bg.gif'
 
 const Intro_Card = () => {
   const [bgState, setBgState] = useState('video');

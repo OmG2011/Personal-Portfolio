@@ -3,7 +3,7 @@ import '../styles/GPTHomepage.css';
 import object from '../assets/Web_Dev.png';
 import backgroundVid from '../assets/Home_Video.mp4';
 import TicTacToe from './TicTacToe';
-import Intro_Card from './Intro_Card';
+import introCardCard from './Intro_Card';
 // import Second_Card from './Second_Card';
 import FallingBoxes from './Falling_Boxes';
 import Skillsets from './Skillsets';
@@ -31,14 +31,14 @@ function HomePage() {
           }}
         />
         <div className='inner-div h-100' style={{ position: 'relative', zIndex: 1 }}>
-          <img className='abstract' src={object} alt='Abstract Image' />
+          <img className='abstract' src={object} />
           <h1 style={{ fontSize: '100px', zIndex: 2, color: 'white', marginLeft: '50px' }}>Om Goyal</h1>
         </div>
       </div>
 
       <div className='body-begin d-flex flex-column flex-lg-row p-2 w-100'>
         <div className='col-lg-6 col-12 h-100'>
-          <Intro_Card />
+          <introCard />
         </div>
 
         <div className='col-lg-6 col-12 h-100'>
