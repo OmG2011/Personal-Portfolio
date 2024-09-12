@@ -3,7 +3,7 @@ import '../styles/GPTHomepage.css';
 import object from '../assets/Web_Dev.png';
 import backgroundVid from '../assets/Home_Video.mp4';
 import TicTacToe from './TicTacToe';
-import introCardCard from './Intro_Card';
+import Intro_Card from './Intro_Card'
 // import Second_Card from './Second_Card';
 import FallingBoxes from './Falling_Boxes';
 import Skillsets from './Skillsets';
@@ -13,7 +13,8 @@ function HomePage() {
 
   return (
     <div className='top'>
-      <div className='first-div w-100'>
+      {/* First Section */}
+      <div className='first-div w-100' style={{ position: 'relative', height: '90vh' }}>
         <video
           className='background-video'
           src={backgroundVid}
@@ -22,39 +23,42 @@ function HomePage() {
           loop
           style={{
             position: 'absolute',
-            top: '10vh',
+            top: 0,
             left: 0,
             width: '100%',
-            height: '90vh',
+            height: '100%',
             objectFit: 'cover',
             zIndex: '0'
           }}
         />
-        <div className='inner-div h-100' style={{ position: 'relative', zIndex: 1 }}>
+        <div className='inner-div' style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1, height: '100%' }}>
           <img className='abstract' src={object} />
-          <h1 style={{ fontSize: '100px', zIndex: 2, color: 'white', marginLeft: '50px' }}>Om Goyal</h1>
+          <h1 style={{ fontSize: '100px', marginLeft: '50px', zIndex: 2 }}>Om Goyal</h1>
         </div>
       </div>
 
+      {/* Body Content Section */}
       <div className='body-begin d-flex flex-column flex-lg-row p-2 w-100'>
-        <div className='col-lg-6 col-12 h-100'>
-          <introCard />
+        <div className='col-lg-6 col-12'>
+          <Intro_Card />
         </div>
-
-        <div className='col-lg-6 col-12 h-100'>
+        <div className='col-lg-6 col-12'>
           {/* <Second_Card /> */}
           <HTML_Proj_1 />
         </div>
       </div>
 
+      {/* Games Section */}
       <div className='row m-2'>
-        <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px' }}>
+        <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
           <TicTacToe />
         </div>
-        <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px' }}>
+        <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
           <FallingBoxes />
         </div>
       </div>
+
+      {/* Skillsets Section */}
       <Skillsets />
     </div>
   );

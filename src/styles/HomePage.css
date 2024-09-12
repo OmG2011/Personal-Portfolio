@@ -1,4 +1,4 @@
-.top {
+/* .top {
   background-color: black;
   font-family: Broody;
   box-sizing: border-box;
@@ -13,17 +13,17 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-track {
   background: white;
-  border: 2px black solid;
+  border: 2px black solid; */
   /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
-}
+/* } */
 
-html::-webkit-scrollbar-thumb {
+/* html::-webkit-scrollbar-thumb {
   background: black;
-  border: 2px white solid;
+  border: 2px white solid; */
   /* border: 3px solid blue; */
-}
+/* } */
 
-.first-div {
+/* .first-div {
   width: 100vh;
   height: 90vh;
   padding: 150px;
@@ -50,11 +50,11 @@ html::-webkit-scrollbar-thumb {
 
 .hover_turn:hover {
   transform: rotateY(180deg);
-}
+} */
 
 /* Code which can be removed later */
 
-.flip-card {
+/* .flip-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
@@ -94,11 +94,11 @@ html::-webkit-scrollbar-thumb {
   color: white;
   transform: rotateY(180deg);
   font-family: odachi;
-}
+} */
 
 /* ------------------------------------- */
 
-
+/* 
 .front-text {
   position: relative;
   text-align: center;
@@ -146,83 +146,83 @@ html::-webkit-scrollbar-thumb {
 
 @media (max-width: 768px) {
   .logo {
-    width: 20%;
+    width: 20%; */
     /* visibility: hidden; */
     /* Adjust logo size */
-  }
+  /* } */
 
-  .nav {
+  /* .nav {
     font-size: 18px;
     width: 100%;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; */
     /* flex-direction: row; */
-  }
+  /* } */
 
-  .front-text {
+  /* .front-text {
     font-size: 18px;
-    width: 100%;
+    width: 100%; */
     /* Adjust font size */
-  }
+  /* } */
 
-  .back-text {
+  /* .back-text {
     visibility: hidden;
   }
 
   .nav p {
     font-size: 18px;
     margin: 0;
-    margin-right: 20px;
+    margin-right: 20px; */
     /* Adjust navigation text size */
-  }
+  /* }
 
   .nav p:nth-child(3) {
-    visibility: hidden;
+    visibility: hidden; */
     /* Adjust navigation text size */
-  }
-}
+  /* }
+} */
 
-@media (max-width: 576px) {
-  .logo {
+/* @media (max-width: 576px) {
+  .logo { */
     /* visibility: hidden; */
-    width: 40%;
+    /* width: 40%; */
     /* Further adjust logo size */
-  }
+  /* } */
 
-  .front-text {
-    font-size: 1rem;
+  /* .front-text {
+    font-size: 1rem; */
     /* Further adjust font size */
-  }
+  /* } */
 
-  .back-text {
+  /* .back-text {
     visibility: hidden;
-  }
+  } */
 
-  .nav {
+  /* .nav { */
     /* flex-direction: row; */
     /* Stack navigation items vertically */
-    align-items: flex-start;
+    /* align-items: flex-start;
     width: 100%;
     flex-wrap: nowrap;
-  }
+  } */
 
-  .nav p {
-    font-size: 16px;
+  /* .nav p {
+    font-size: 16px; */
     /* Further adjust navigation text size */
     /* margin-bottom: 5px; */
-    text-align: center;
+    /* text-align: center;
     margin: 0;
-    margin-right: 20px;
+    margin-right: 20px; */
     /* Add space between items */
-  }
+  /* } */
 
-  .nav p:nth-child(3) {
+  /* .nav p:nth-child(3) {
     visibility: hidden;
-    margin-right: 0px;
+    margin-right: 0px; */
     /* Adjust navigation text size */
-  }
-}
+  /* } */
+/* } */
 
-.body-begin {
+/* .body-begin {
   height: 60vh;
   width: 100vh;
 }
@@ -235,9 +235,9 @@ html::-webkit-scrollbar-thumb {
   border: solid 1px white;
 }
 
-.video button {
+.video button { */
   /* border-radius: 10px; */
-  border: none;
+  /* border: none;
   background-color: black;
   color: white;
   position: absolute;
@@ -255,9 +255,9 @@ html::-webkit-scrollbar-thumb {
 
 .picture button {
   border: none;
-  border-radius: 10px;
+  border-radius: 10px; */
   /* border-color: white; */
-  background-color: black;
+  /* background-color: black;
   color: white;
   position: absolute;
   bottom: 2%;
@@ -295,24 +295,24 @@ html::-webkit-scrollbar-thumb {
 
   20%,
   30% {
-    margin-top: -60px;
+    margin-top: -60px; */
     /* Move up by one item height */
-  }
+  /* }
 
   40%,
   50% {
-    margin-top: -115px;
+    margin-top: -115px; */
     /* Move up by two item heights */
-  }
+  /* } */
 
-  60%,
+  /* 60%,
   70%,
   80% {
-    margin-top: -115px;
+    margin-top: -115px; */
     /* Move up by three item heights */
-  }
+  /* } */
 
-  90%,
+  /* 90%,
   100% {
     margin-top: 0;
   }
@@ -337,4 +337,4 @@ html::-webkit-scrollbar-thumb {
 @font-face {
   font-family: 'Broody';
   src: url('../assets/Broody.otf');
-}
+} */

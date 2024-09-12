@@ -6,8 +6,7 @@ import Skillsets from '../screens/Skillsets';
 function portfolioRoutes() {
   return (
     <div>
-      <Routes>
-        {/* <Route path='/' element={<HomePage />} /> */}
+      <Routes>        
         <Route path='/Personal-Portfolio/' element={<GPTHomepage />} />
         <Route path='/Personal-Portfolio/cv' element={<Skillsets />} />
       </Routes>
