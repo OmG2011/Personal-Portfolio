@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import mole from '../assets/Whack-a-mole.png';
 
 function Falling_Boxes() {
@@ -10,15 +10,15 @@ function Falling_Boxes() {
   const intervalRef = useRef(null);  // Use ref to hold the interval ID
   const [intervalDelay, setIntervalDelay] = useState(500);  // Store the interval delay
   const imgRef = useRef(null);
-  const [dis, setDis] = useState('none')
+  const [dis, setDis] = useState('none');
 
-  const randomizer = () => {
+  const randomizer = useCallback(() => {
     const max = 300;
     const min = 50;
     setMoleSize(Math.random() * (max - min) + min);
-  };
+  }, []);
 
-  const moveMole = () => {
+  const moveMole = useCallback(() => {
     if (divRef.current) {
       const boundaries = divRef.current.getBoundingClientRect();
       const newX = Math.random() * (boundaries.width - moleSize);
@@ -29,7 +29,7 @@ function Falling_Boxes() {
       // Set a new random interval delay
       setIntervalDelay(Math.random() * (1000 - 200) + 200);
     }
-  };
+  }, [moleSize, randomizer]);
 
   useEffect(() => {
     if (!paused) {
@@ -44,7 +44,7 @@ function Falling_Boxes() {
       // Clear the interval when the game is paused
       clearInterval(intervalRef.current);
     }
-  }, [paused, intervalDelay]);  // Run effect on both pause state and interval delay change
+  }, [paused, intervalDelay, moveMole]);  // Add moveMole to dependencies
 
   const handleMoleClick = () => {
     if (!paused) {
@@ -62,17 +62,22 @@ function Falling_Boxes() {
       <div>
         <h1>Whack a Mole!</h1>
       </div>
-      <div className="h-100" ref={divRef} style={{ position: 'relative' }} onClick={(e) => {
-        if (!paused && e.target !== imgRef.current) {
-          setDis('a')
-          if (score > 0) {
-            setScore((prevScore) => prevScore - 1)
+      <div
+        className="h-100"
+        ref={divRef}
+        style={{ position: 'relative' }}
+        onClick={(e) => {
+          if (!paused && e.target !== imgRef.current) {
+            setDis('a');
+            if (score > 0) {
+              setScore((prevScore) => prevScore - 1);
+            }
+            setTimeout(() => {
+              setDis('none');
+            }, 100);
           }
-          setTimeout(() => {
-            setDis('none')
-          }, 100)
-        }
-      }}>
+        }}
+      >
         <img
           src={mole}
           ref={imgRef}
@@ -81,12 +86,23 @@ function Falling_Boxes() {
             position: 'absolute',
             left: `${position[0]}px`,
             top: `${position[1]}px`,
-            display: dis === 'none' ? '' : 'none'
+            display: dis === 'none' ? '' : 'none',
           }}
           alt="Mole"
           onClick={handleMoleClick}
         />
-        <h1 className='h-100' style={{ color: 'red', display: dis === 'none' ? 'none' : 'flex', alignContent: 'center', justifyContent: 'center', fontSize: '100px' }}>X</h1>
+        <h1
+          className="h-100"
+          style={{
+            color: 'red',
+            display: dis === 'none' ? 'none' : 'flex',
+            alignContent: 'center',
+            justifyContent: 'center',
+            fontSize: '100px',
+          }}
+        >
+          X
+        </h1>
       </div>
       <div className="d-flex justify-content-between">
         <button onClick={() => setScore(0)}>Restart</button>

@@ -3,11 +3,11 @@ import '../styles/GPTHomepage.css';
 import object from '../assets/Web_Dev.png';
 import backgroundVid from '../assets/Home_Video.mp4';
 import TicTacToe from './TicTacToe';
-import Intro_Card from './Intro_Card'
+import IntroCard from './Intro_Card'
 // import Second_Card from './Second_Card';
 import FallingBoxes from './Falling_Boxes';
 import Skillsets from './Skillsets';
-import HTML_Proj_1 from './HTML_Proj_1';
+import HTMLProj1 from './HTML_Proj_1';
 
 function HomePage() {
 
@@ -32,7 +32,7 @@ function HomePage() {
           }}
         />
         <div className='inner-div' style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1, height: '100%' }}>
-          <img className='abstract' src={object} />
+          <img className='abstract' src={object} alt='abstract' />
           <h1 style={{ fontSize: '100px', marginLeft: '50px', zIndex: 2 }}>Om Goyal</h1>
         </div>
       </div>
@@ -40,11 +40,11 @@ function HomePage() {
       {/* Body Content Section */}
       <div className='body-begin d-flex flex-column flex-lg-row p-2 w-100'>
         <div className='col-lg-6 col-12'>
-          <Intro_Card />
+          <IntroCard />
         </div>
         <div className='col-lg-6 col-12'>
           {/* <Second_Card /> */}
-          <HTML_Proj_1 />
+          <HTMLProj1 />
         </div>
       </div>
 
