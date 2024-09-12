@@ -10,6 +10,7 @@ import backgroundVideo from '../assets/Home_Background.mp4'
 import backgroundVid from '../assets/Home_Video.mp4'
 import object_2 from '../assets/Web_dev.gif'
 import TicTacToe from './TicTacToe';
+import Skillsets from './Skillsets';
 
 
 function HomePage() {
@@ -224,6 +225,8 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+      <Skillsets />
 
 
       {/* <div className='smaller-cards d-flex w-100 justify-content-center p-2 h-100'>

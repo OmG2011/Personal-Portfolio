@@ -1,12 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../styles/GPTHomepage.css';
-import axios from 'axios';
 import object from '../assets/Web_Dev.png';
 import backgroundVid from '../assets/Home_Video.mp4';
 import TicTacToe from './TicTacToe';
 import Intro_Card from './Intro_Card';
-import Second_Card from './Second_Card';
+// import Second_Card from './Second_Card';
 import FallingBoxes from './Falling_Boxes';
+import Skillsets from './Skillsets';
+import HTML_Proj_1 from './HTML_Proj_1';
 
 function HomePage() {
 
@@ -41,18 +42,20 @@ function HomePage() {
         </div>
 
         <div className='col-lg-6 col-12 h-100'>
-          <Second_Card />
+          {/* <Second_Card /> */}
+          <HTML_Proj_1 />
         </div>
-      </div>      
+      </div>
 
       <div className='row m-2'>
         <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px' }}>
           <TicTacToe />
         </div>
-        <div className='col-lg-3 col-12 p-4' style={{ position: 'relative', border: '2px white solid', borderRadius: '20px' }}>
+        <div className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px' }}>
           <FallingBoxes />
         </div>
       </div>
+      <Skillsets />
     </div>
   );
 }
