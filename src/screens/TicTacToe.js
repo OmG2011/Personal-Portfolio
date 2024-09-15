@@ -180,7 +180,7 @@ function TicTacToe() {
 
   useEffect(() => {
     winChecker(); // Check for a winner whenever the tileArray changes
-  }, [tileArray]);
+  }, [tileArray, winChecker]);
 
   return (
     <div style={{ color: 'white' }}>
