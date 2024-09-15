@@ -93,7 +93,7 @@ function TicTacToe() {
         }
       }, Math.random() * (1500 - 500 + 1) + 500)
     }
-  });
+  }, [tileArray, winner, symbol]);
 
   const makeAMove = () => {
     if (tileArray[4] === 'Click to Play') {
