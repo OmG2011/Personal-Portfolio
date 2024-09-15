@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 function TicTacToe() {
   const [symbol, setSymbol] = useState('X');
@@ -24,7 +24,7 @@ function TicTacToe() {
     }
   };
 
-  const winChecker = () => {
+  const winChecker = useCallback(() => {
     const winPatterns = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
       [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
@@ -93,7 +93,7 @@ function TicTacToe() {
         }
       }, Math.random() * (1500 - 500 + 1) + 500)
     }
-  };
+  });
 
   const makeAMove = () => {
     if (tileArray[4] === 'Click to Play') {
@@ -180,7 +180,7 @@ function TicTacToe() {
 
   useEffect(() => {
     winChecker(); // Check for a winner whenever the tileArray changes
-  }, [tileArray, winChecker]);
+  }, [tileArray]);
 
   return (
     <div style={{ color: 'white' }}>
