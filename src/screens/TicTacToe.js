@@ -22,6 +22,64 @@ function TicTacToe() {
       }
     }
   }, [cpuTurn, symbol, tileArray, winner]);
+  
+  const makeAMove = useCallback(() => {
+    if (tileArray[4] === 'Click to Play') {
+      return 4;
+    }
+
+    const corners = [0, 2, 6, 8];
+    for (let corner of corners) {
+      if (tileArray[corner] === 'Click to Play') {
+        return corner;
+      }
+    }
+
+    const edges = [1, 3, 5, 7];
+    for (let edge of edges) {
+      if (tileArray[edge] === 'Click to Play') {
+        return edge;
+      }
+    }
+
+    return null;
+  }, [tileArray]);
+
+  const checkAlmostWinning = useCallback((symbolToCheck) => {
+    const winPatterns = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+      [0, 4, 8], [2, 4, 6],            // Diagonals
+    ];
+
+    let almostDonePatterns = [];
+
+    for (let pattern of winPatterns) {
+      const [a, b, c] = pattern;
+      let filledCount = 0;
+      let emptySpot = null;
+
+      if (tileArray[a] === symbolToCheck) filledCount++;
+      else if (tileArray[a] === 'Click to Play') emptySpot = a;
+      if (tileArray[b] === symbolToCheck) filledCount++;
+      else if (tileArray[b] === 'Click to Play') emptySpot = b;
+      if (tileArray[c] === symbolToCheck) filledCount++;
+      else if (tileArray[c] === 'Click to Play') emptySpot = c;
+
+      if (filledCount === 2 && emptySpot !== null) {
+        almostDonePatterns.push(emptySpot);
+      }
+    }
+
+    if (almostDonePatterns.length > 1) {
+      const randomIndex = Math.floor(Math.random() * almostDonePatterns.length);
+      return almostDonePatterns[randomIndex];
+    } else if (almostDonePatterns.length === 1) {
+      return almostDonePatterns[0];
+    }
+
+    return null;
+  }, [tileArray]);
 
   const winChecker = useCallback(() => {
     const winPatterns = [
@@ -84,63 +142,6 @@ function TicTacToe() {
     }
   }, [tileArray, winner, symbol, checkAlmostWinning, makeAMove]);
 
-  const makeAMove = useCallback(() => {
-    if (tileArray[4] === 'Click to Play') {
-      return 4;
-    }
-
-    const corners = [0, 2, 6, 8];
-    for (let corner of corners) {
-      if (tileArray[corner] === 'Click to Play') {
-        return corner;
-      }
-    }
-
-    const edges = [1, 3, 5, 7];
-    for (let edge of edges) {
-      if (tileArray[edge] === 'Click to Play') {
-        return edge;
-      }
-    }
-
-    return null;
-  }, [tileArray]);
-
-  const checkAlmostWinning = useCallback((symbolToCheck) => {
-    const winPatterns = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
-      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
-      [0, 4, 8], [2, 4, 6],            // Diagonals
-    ];
-
-    let almostDonePatterns = [];
-
-    for (let pattern of winPatterns) {
-      const [a, b, c] = pattern;
-      let filledCount = 0;
-      let emptySpot = null;
-
-      if (tileArray[a] === symbolToCheck) filledCount++;
-      else if (tileArray[a] === 'Click to Play') emptySpot = a;
-      if (tileArray[b] === symbolToCheck) filledCount++;
-      else if (tileArray[b] === 'Click to Play') emptySpot = b;
-      if (tileArray[c] === symbolToCheck) filledCount++;
-      else if (tileArray[c] === 'Click to Play') emptySpot = c;
-
-      if (filledCount === 2 && emptySpot !== null) {
-        almostDonePatterns.push(emptySpot);
-      }
-    }
-
-    if (almostDonePatterns.length > 1) {
-      const randomIndex = Math.floor(Math.random() * almostDonePatterns.length);
-      return almostDonePatterns[randomIndex];
-    } else if (almostDonePatterns.length === 1) {
-      return almostDonePatterns[0];
-    }
-
-    return null;
-  }, [tileArray]);
 
   const handleRestart = useCallback(() => {
     setTileArray([
