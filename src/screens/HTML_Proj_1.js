@@ -1,14 +1,26 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/HTML_Proj_1.css'; // We'll create this file for styling
 
-function HTML_Proj_1(props) {
+function HTMLProj1(props) {
+  let navigate = useNavigate();
+  
+  const routeChange = () => {
+    window.location.href = 'https://omg2011.github.io/HTML_Project/';
+  };
+
   return (
-    <div style={{ height: '100%' }}>
+    <div
+      className="html-proj-card d-flex justify-content-center align-items-center h-100 flex-column me-2"
+      onClick={routeChange}
+    >
       <iframe
-        src="https://yourusername.github.io/mywebsite/design.html"
-        title="My Project"                
+        style={{ height: '100%', width: '100%' }}
+        src="https://omg2011.github.io/HTML_Project/"
+        title="My Project"
       />
     </div>
   );
 }
 
-export default HTML_Proj_1;
+export default HTMLProj1;

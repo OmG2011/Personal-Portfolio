@@ -55,6 +55,38 @@ html::-webkit-scrollbar-thumb {
   width: 100vh;
 }
 
+/* Keyframes for floating effect */
+@keyframes float-in {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation applied to body content cards */
+.body-content {
+  opacity: 0;
+  /* Initial state is invisible */
+  transform: translateY(50px);
+  /* Start slightly below the view */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Animation triggered on scroll */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  /* Move to normal position */
+  animation: float-in 1s forwards;
+  /* Apply animation */
+}
+
+
 @font-face {
   font-family: 'DPComic';
   src: url('../assets/dpcomic.ttf');
