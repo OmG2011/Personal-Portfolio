@@ -33,10 +33,22 @@ html::-webkit-scrollbar-thumb {
   padding: 150px;
 }
 
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0); /* Starting and ending position */
+  }
+  50% {
+    transform: translateY(-20px); /* Move upwards by 20px */
+  }
+}
+
 .inner-div {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
 }
 
 
@@ -44,6 +56,7 @@ html::-webkit-scrollbar-thumb {
   position: absolute;
   margin-right: 20%;
   z-index: 0;
+  animation: bobbing 2s ease-in-out infinite;
 }
 
 .hover_turn:hover {

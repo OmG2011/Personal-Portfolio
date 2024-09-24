@@ -6,15 +6,18 @@ import TicTacToe from './TicTacToe';
 import IntroCard from './Intro_Card';
 import FallingBoxes from './Falling_Boxes';
 import HTMLProj1 from './HTML_Proj_1';
+import Social_Media from './Social_Media';
 import { useNavigate } from 'react-router-dom';
+import Netflix from './Netflix';
+import AmaltaasWebsite from './AmaltaasWebsite';
 
 function HomePage() {
   const boxesRef = useRef([]);
 
   let navigate = useNavigate();
   const routeChange = () => {
-    let path = `https://omg2011.github.io/HTML_Project/`;
-    navigate(path)
+    let url = "https://omg2011.github.io/HTML_Project/";
+    window.open(url, '_blank');
   }
 
   useEffect(() => {
@@ -92,11 +95,23 @@ function HomePage() {
 
       {/* Games Section */}
       <div className='row m-2'>
-        <div ref={(el) => (boxesRef.current[0] = el)} className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
+        <div ref={(el) => (boxesRef.current[0] = el)} className='col-lg-3 col-12 p-4 body-content' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
           <TicTacToe />
         </div>
-        <div ref={(el) => (boxesRef.current[1] = el)} className='col-lg-3 col-12 p-4' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
+        <div ref={(el) => (boxesRef.current[1] = el)} className='col-lg-3 col-12 p-4 body-content' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
           <FallingBoxes />
+        </div>
+        <div ref={(el) => (boxesRef.current[0] = el)} className='col-lg-6 col-12 body-content' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
+          <Social_Media />
+        </div>
+      </div>
+
+      <div className='body-begin d-flex flex-column flex-lg-row p-2 w-100'>
+        <div ref={(el) => (boxesRef.current[0] = el)} className='col-lg-6 col-12 body-content' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
+          <Netflix />
+        </div>
+        <div ref={(el) => (boxesRef.current[0] = el)} className='col-lg-6 col-12 body-content' style={{ border: '2px white solid', borderRadius: '20px', marginBottom: '20px' }}>
+          <AmaltaasWebsite />
         </div>
       </div>
     </div>

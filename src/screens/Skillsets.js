@@ -3,8 +3,8 @@ import ReactSlider from 'react-slider';
 import '../styles/Skillsets.css'
 
 function Skillsets(props) {
-  const submitHandler = ()  =>  {
-    
+  const submitHandler = () => {
+
   }
 
   return (
@@ -14,7 +14,7 @@ function Skillsets(props) {
           <h5 className='mb-3'>Om Goyal</h5>
           <h5 className='mb-3'>Full-Stack Developer (MERN Stack)</h5>
         </div>
-        <div className='col-lg-4 col-6 d-flex flex-column justify-content-center align-items-center'>          
+        <div className='col-lg-4 col-6 d-flex flex-column justify-content-center align-items-center'>
           <h5 className='mb-3'>omgoyal20@outlook.com</h5>
         </div>
         <div className='col-lg-4 col-6 d-flex flex-column justify-content-center align-items-center'>
@@ -292,11 +292,11 @@ function Skillsets(props) {
               <br />
 
               <label className='me-4'>Contact:</label>
-              <input type="text" id="fname" name="fname" />
+              <input type='number' id='contact' name='contact' />
               <br />
 
               <label className='me-4'>Note:</label>
-              <input type="text" id="fname" name="fname" />
+              <input type="text" id="note" name="note" />
               <br />
 
               <button type='submit' style={{ width: '100px' }}>Submit</button>
