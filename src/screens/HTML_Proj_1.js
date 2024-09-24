@@ -4,7 +4,6 @@ import '../styles/HTML_Proj_1.css'; // We'll create this file for styling
 import HTML from '../assets/HTML_Web.png'
 
 function HTMLProj1(props) {
-  let navigate = useNavigate();
 
   const routeChange = () => {
     window.location.href = 'https://omg2011.github.io/HTML_Project/';

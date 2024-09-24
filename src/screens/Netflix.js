@@ -4,8 +4,6 @@ import '../styles/HTML_Proj_1.css'; // We'll create this file for styling
 import netflix from '../assets/Netflix.png'
 
 function Netflix() {
-  let navigate = useNavigate();
-
   const routeChange = () => {
     window.location.href = 'https://omg2011.github.io/Netflix_Frontend/';
   };

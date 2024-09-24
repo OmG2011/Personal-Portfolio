@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import ReactSlider from 'react-slider';
 import '../styles/Skillsets.css'
 import phone from '../assets/call.gif'
