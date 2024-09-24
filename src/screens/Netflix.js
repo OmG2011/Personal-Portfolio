@@ -7,7 +7,7 @@ function Netflix() {
   let navigate = useNavigate();
 
   const routeChange = () => {
-    window.location.href = 'https://omg2011.github.io/Social_Media/';
+    window.location.href = 'https://omg2011.github.io/Netflix_Frontend/';
   };
 
   return (

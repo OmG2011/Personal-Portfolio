@@ -1,11 +1,62 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import ReactSlider from 'react-slider';
 import '../styles/Skillsets.css'
+import phone from '../assets/call.gif'
+import linkedin from '../assets/linkedin.gif'
 
-function Skillsets(props) {
-  const submitHandler = () => {
+function Skillsets() {
+  // const [error, setError] = useState(''); // Initialize as an empty string
+  // const [formData, setFormData] = useState({
+  //   fname: '',
+  //   contact: '',
+  //   note: '',
+  // });
 
-  }
+  const routeChangePhone = () => {
+    let url = "https://wa.link/98zdlp";
+    window.open(url, '_blank');
+  };
+
+  const routeChangeLinkedIn = () => {
+    let url = "https://www.linkedin.com/in/om-goyal-5663b3193/";
+    window.open(url, '_blank');
+  };
+
+
+  // const { fname, contact, note } = formData;
+
+  // const handleInputChange = (e) => {
+  //   setFormData({ ...formData, [e.target.name]: e.target.value });
+  // }
+
+  // const submitHandler = async (e) => {
+  //   e.preventDefault();
+
+  //   // Validation logic
+  //   if (!formData.fname) {
+  //     setError('Name is required');
+  //     return;
+  //   }
+
+  //   if (!formData.contact || formData.contact.length < 10) {
+  //     setError('Please enter a valid 10-digit contact number');
+  //     return;
+  //   }
+
+  //   if (!formData.note) {
+  //     setError('Note is required');
+  //     return;
+  //   }
+
+  //   setError('');
+  //   try {
+  //     console.log("Something")
+  //     // await response.json()
+  //     // setFormData({ ...DataTransfer, fname: '', contact: '', note: '' })
+  //   } catch (err) {
+  //     alert("Something went wrong!")
+  //   }
+  // };
 
   return (
     <div className='container-fluid' style={{ backgroundColor: "#CDC2A5" }}>
@@ -286,21 +337,33 @@ function Skillsets(props) {
 
           <div className='p-2' style={{ border: '2px solid white', borderRadius: '10px', color: '#4A2C2A' }}>
             <h3 className='mb-3' style={{ color: '#2C3E50' }}>Contact Me</h3>
-            <form className='d-flex flex-column justify-content-between' onSubmit={submitHandler}>
+            <div className='d-flex align-items-center p-1'>
+              <div className='h-100 w-100 d-flex flex-column justify-content-center align-items-center'>
+                <img src={phone} style={{ width: '15%', cursor: 'pointer' }} onClick={routeChangePhone} />
+                <p>Whatsapp</p>
+              </div>
+              <div className='h-100 w-100'>
+                <img src={linkedin} style={{ width: '16%', cursor: 'pointer' }} onClick={routeChangeLinkedIn} />
+                <p>LinkedIn</p>
+              </div>
+            </div>
+            {/* <form className='d-flex flex-column justify-content-between' onSubmit={submitHandler}>
               <label className='me-2'>Name:</label>
-              <input type="text" id="fname" name="fname" />
+              <input type="text" id="fname" name="fname" value={formData.fname} onChange={handleInputChange} />
               <br />
 
               <label className='me-4'>Contact:</label>
-              <input type='number' id='contact' name='contact' />
+              <input type='tel' id='contact' name='contact' value={formData.contact} onChange={handleInputChange} />
               <br />
 
               <label className='me-4'>Note:</label>
-              <input type="text" id="note" name="note" />
+              <input type="text" id="note" name="note" value={formData.note} onChange={handleInputChange} />
               <br />
 
-              <button type='submit' style={{ width: '100px' }}>Submit</button>
-            </form>
+              {error && <p className='m-0 p-0' style={{ color: 'red' }}>{error}</p>}
+
+              <button type='submit' style={{ width: '100px' }} onSubmit={submitHandler}>Submit</button>
+            </form> */}
 
           </div>
         </div>
