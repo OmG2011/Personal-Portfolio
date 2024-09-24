@@ -1,27 +1,29 @@
 {
   "files": {
     "main.css": "/static/css/main.148daec1.css",
-    "main.js": "/static/js/main.94bf5aef.js",
+    "main.js": "/static/js/main.45534fe2.js",
     "static/js/453.b21437c2.chunk.js": "/static/js/453.b21437c2.chunk.js",
     "static/media/Home_Video.mp4": "/static/media/Home_Video.c1aa310dc0a4184390e2.mp4",
     "static/media/Netflix.png": "/static/media/Netflix.be1f55eb87763f0e77dd.png",
     "static/media/card-bg.gif": "/static/media/card-bg.90477685d42c4d47a387.gif",
     "static/media/Amaltaas.png": "/static/media/Amaltaas.cc80eda13073ae4ee80e.png",
+    "static/media/call.gif": "/static/media/call.f63588269db887d05838.gif",
     "static/media/Social_Media_Frontend.png": "/static/media/Social_Media_Frontend.1a4692426aaa5d3528bb.png",
     "static/media/HTML_Web.png": "/static/media/HTML_Web.57b37dae8762b2087d5d.png",
     "static/media/Odachi.otf": "/static/media/Odachi.4ff4fe5720de3597c0ee.otf",
     "static/media/Whack-a-mole.png": "/static/media/Whack-a-mole.727e80760e9e89eecf24.png",
     "static/media/Web_Dev.png": "/static/media/Web_Dev.4fda01c578325d326092.png",
     "static/media/Logo.png": "/static/media/Logo.3bb3f2871d9371050293.png",
+    "static/media/linkedin.gif": "/static/media/linkedin.d77269695d1ee094ae5c.gif",
     "static/media/Broody.otf": "/static/media/Broody.4d3916f07ee3a2aca453.otf",
     "static/media/dpcomic.ttf": "/static/media/dpcomic.d7850454ee2ba505e533.ttf",
     "index.html": "/index.html",
     "main.148daec1.css.map": "/static/css/main.148daec1.css.map",
-    "main.94bf5aef.js.map": "/static/js/main.94bf5aef.js.map",
+    "main.45534fe2.js.map": "/static/js/main.45534fe2.js.map",
     "453.b21437c2.chunk.js.map": "/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.148daec1.css",
-    "static/js/main.94bf5aef.js"
+    "static/js/main.45534fe2.js"
   ]
 }
